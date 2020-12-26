@@ -31,7 +31,7 @@ def data_check(data,target):
     if isinstance(data, pd.DataFrame) or isinstance(data, pd.core.frame.DataFrame):
         data_index = data.index         
         if target is None:
-            transformed_data = data.ix[:,0].values
+            transformed_data = data.loc[:,0].values
             data_name = str(data.columns.values[0])
         else:
             transformed_data = data[target].values          
